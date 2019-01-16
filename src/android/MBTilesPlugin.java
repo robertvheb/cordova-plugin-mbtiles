@@ -189,7 +189,6 @@ public class MBTilesPlugin extends CordovaPlugin
 		{
 			if (mbTilesActions.isOpen()) {
 				mbTilesActions.close();
-				mbTilesActions = null;
 			}
 			
 			result = new PluginResult(PluginResult.Status.OK);

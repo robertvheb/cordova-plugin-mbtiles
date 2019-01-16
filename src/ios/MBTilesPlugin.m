@@ -91,7 +91,6 @@
 				if (tilesActions != nil) {
 					if ([tilesActions isOpen]) {
 						[tilesActions close];
-						tilesActions = nil;
 					}
 					pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
 				} else {
