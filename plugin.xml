@@ -9,7 +9,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
     <keywords>cordova,mbtiles</keywords>
     
     <!-- dependency id="org.apache.cordova.file@1" /-->
-    <dependency id="org.apache.cordova.file-transfer" version="0.4.2" />
+    <dependency id="org.apache.cordova.file-transfer" version="1.7.1" />
 
     <!-- android -->
     <platform name="android">
