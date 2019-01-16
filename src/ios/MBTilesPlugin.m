@@ -85,6 +85,24 @@
     }];
 }
 
+- (void)close:(CDVInvokedUrlCommand*)command {
+		[self.commandDelegate runInBackground:^{
+        CDVPluginResult* pluginResult = nil;
+				if (tilesActions != nil) {
+					if ([tilesActions isOpen]) {
+						[tilesActions close];
+						tilesActions = nil;
+					}
+					pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+				} else {
+        	pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+        }
+				
+				// The sendPluginResult method is thread-safe.
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+		}];
+}
+
 - (void)get_metadata:(CDVInvokedUrlCommand*)command {
     [self.commandDelegate runInBackground:^{
         CDVPluginResult* pluginResult = nil;

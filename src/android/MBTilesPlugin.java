@@ -20,6 +20,7 @@ public class MBTilesPlugin extends CordovaPlugin
 	// declaration of static variable 
 	public static final String ACTION_INIT = "init";
 	public static final String ACTION_OPEN = "open";
+	public static final String ACTION_CLOSE = "close";
 	public static final String ACTION_OPEN_TYPE_DB = "db";
 	public static final String ACTION_OPEN_TYPE_FILE = "file";
 	public static final String OPEN_TYPE_PATH_CDV = "cdvfile";
@@ -60,6 +61,11 @@ public class MBTilesPlugin extends CordovaPlugin
 					else if (actionFinal.equals(ACTION_OPEN))
 					{
 						result = actionOpen(dataFinal);
+					}
+					
+					else if (actionFinal.equals(ACTION_CLOSE))
+					{
+						result = actionClose(dataFinal);
 					}
 					
 					else if (actionFinal.equals(ACTION_GET_METADATA))
@@ -172,6 +178,25 @@ public class MBTilesPlugin extends CordovaPlugin
 		} else {
 			result = new PluginResult(PluginResult.Status.ERROR);
 		}
+		return result;
+	}
+	
+	private PluginResult actionClose(JSONArray data) throws JSONException
+	{
+		PluginResult result = null;
+		
+		if (mbTilesActions != null)
+		{
+			if (mbTilesActions.isOpen()) {
+				mbTilesActions.close();
+				mbTilesActions = null;
+			}
+			
+			result = new PluginResult(PluginResult.Status.OK);
+		} else {
+			result = new PluginResult(PluginResult.Status.OK);
+		}
+		
 		return result;
 	}
 	

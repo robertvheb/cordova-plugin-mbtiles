@@ -26,6 +26,17 @@ MBTilesPlugin.prototype.open = function(params, onSuccess, onError)
 };
 
 /*
+function close
+closes the  database sqlite
+params : {}
+return : success or error callback
+*/
+MBTilesPlugin.prototype.close = function(params, onSuccess, onError)
+{
+	return cordova.exec(onSuccess, onError, "MBTilesPlugin", "close", [params]);
+};
+
+/*
 function getMetadata
 get the metadata of the database opened
 return : success or error callback

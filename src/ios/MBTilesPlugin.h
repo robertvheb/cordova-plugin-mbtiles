@@ -33,6 +33,11 @@
 - (void)open:(CDVInvokedUrlCommand*)command;
 
 /**
+* action close 
+*/
+- (void)close:(CDVInvokedUrlCommand*)command;
+
+/**
 * action get_metadata 
 */
 - (void)get_metadata:(CDVInvokedUrlCommand*)command;
