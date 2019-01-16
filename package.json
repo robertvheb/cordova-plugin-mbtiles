@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-mbtiles",
+  "version": "3.4.0",
+  "description": "Cordova MBTiles Plugin",
+  "scripts": {
+  },
+  "cordova": {
+    "id": "cordova-plugin-mbtiles",
+    "platforms": [
+      "android",
+      "ios",
+			"wp",
+			"blackberry10"
+    ]
+  },
+  "repository": "https://github.com/ffournier/cordova-plugin-mbtiles.git",
+  "keywords": [
+    "cordova",
+    "sqlite",
+    "sqlite3",
+    "websql",
+    "database",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/nolanlawson/cordova-plugin-sqlite-2/issues"
+  },
+  "homepage": "https://github.com/nolanlawson/cordova-plugin-sqlite-2#readme",
+  "devDependencies": {
+  }
+}
